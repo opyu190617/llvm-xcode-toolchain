@@ -10,16 +10,13 @@ if [ -z "${version}" ]; then
 fi
 
 if [ ! -d llvm-project ]; then
-  echo "test"
   git clone https://github.com/llvm/llvm-project.git llvm-project
 fi
 
 pushd llvm-project
-#git clean -fdx
-#git reset --hard origin/main
-#git fetch --force
-#git fetch --tags --force
-#git reset --hard tags/llvmorg-${version}
-git checkout llvmorg-${version}
-git pull origin llvmorg-${version}
+git clean -fdx
+git reset --hard origin/main
+git fetch --force
+git fetch --tags --force
+git reset --hard tags/llvmorg-${version}
 popd
