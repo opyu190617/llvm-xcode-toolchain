@@ -14,9 +14,11 @@ if [ ! -d llvm-project ]; then
 fi
 
 pushd llvm-project
-git clean -fdx
-git reset --hard origin/main
-git fetch --force
-git fetch --tags --force
-git reset --hard tags/llvmorg-${version}
+#git clean -fdx
+#git reset --hard origin/main
+#git fetch --force
+#git fetch --tags --force
+#git reset --hard tags/llvmorg-${version}
+git checkout llvmorg-${version}
+git pull origin llvmorg-${version}
 popd
