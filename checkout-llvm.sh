@@ -10,6 +10,7 @@ if [ -z "${version}" ]; then
 fi
 
 if [ ! -d llvm-project ]; then
+  echo "test"
   git clone https://github.com/llvm/llvm-project.git llvm-project
 fi
 
